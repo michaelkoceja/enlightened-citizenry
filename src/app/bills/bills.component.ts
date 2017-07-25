@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnlightenedService } from '../enlightened.service'
 
 @Component({
   selector: 'app-bills',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private enlightenedService: EnlightenedService) { }
 
   ngOnInit() {
   }
