@@ -10,23 +10,10 @@ export class EnlightenedService {
   constructor(private http: Http) {
     let headers = new Headers();
     headers.append('X-API-Key', apiKey);
-    this.http.get('https://api.propublica.org/congress/v1/115/senate/members.json', { headers: headers }).subscribe(response => {
+    this.http.get('https://api.propublica.org/congress/v1/115/senate/bills/active.json', { headers: headers }).subscribe(response => {
     console.log(response.json());
   });
   }
 
-  // getBills(bills) {
-  // this.http.get(`https://api.propublica.org/congress/v1/115/${bills}/chamber.json`, this.attachHeader()).subscribe((data) => {
-  //   this.bills = data.json().results[0].members;
-  //   console.log(this.bills);
-  //   return this.bills;
-  // });
+// https://api.propublica.org/congress/v1/115/senate/members.json
 }
-
-  // attachHeader() {
-  // var headers = new Headers();
-  // headers.append('X-API-Key', apiKey);
-  // var header = {headers: headers};
-  // return header;
-  // }
-// }
